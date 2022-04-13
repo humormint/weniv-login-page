@@ -1,0 +1,125 @@
+body {
+  background-color: beige;
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/*IR 기법*/
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* float 해제 */
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container-login a {
+  text-decoration: none;
+}
+
+.container-login {
+  width: 350px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px 15px 17px;
+  box-sizing: border-box;
+}
+
+.container-login .text-login {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 16px;
+}
+
+.container-login .link-login {
+  display: block;
+  margin: 0 0 16px 0;
+  padding: 10px 0 12px;
+  background-color: #711bff;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.container-login .img-logo {
+  vertical-align: -3px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.container-login .container-find {
+  float: left;
+}
+
+.container-login .container-join {
+  float: right;
+}
+
+.container-find a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #767676;
+}
+
+.container-join a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #767676;
+}
+
+.container-find .link-id::after {
+  float: right;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 12px;
+  margin: 0 4px;
+  background-color: #767676;
+}
+
+.container-find [class^="link"] {
+  float: left;
+}
+
+.container-join [class$="join"] {
+  float: left;
+}
+
+.container-find .img-find {
+  float: left;
+  margin: -1px 4px 0 0;
+}
+
+.container-join .img-join {
+  margin: -1px 4px 0 0;
+
+}
